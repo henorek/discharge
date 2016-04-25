@@ -22,7 +22,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    buildToolsVersion "23.0.1"
 
     defaultConfig {
         applicationId "com.henorek.sample.discharge"
@@ -30,6 +30,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0.0"
+        multiDexEnabled true
     }
 }
 

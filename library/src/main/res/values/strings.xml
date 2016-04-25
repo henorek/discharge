@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright 2015 Eduard Ereza Martínez
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright 2016 Jaroslaw Jankowski
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -15,14 +17,19 @@
   -->
 
 <resources>
-    <string name="crashczyk_error_activity_error_occurred_explanation">Coś poszło nie tak, mój przyjacielu.</string>
-    <string name="crashczyk_error_activity_unknown_exception">Mój przyjacielu, jak wyrazić to, co czuję...</string>
-    <string name="crashczyk_error_activity_restart_app">Zatańczmy zatem jeszcze raz.</string>
-    <string name="crashczyk_error_activity_close_app">Ma aplikacjo, byłaś mi na prawdę bliska.</string>
-    <string name="crashczyk_error_activity_error_details">Czym jest dla mnie przyjaźń Twa.</string>
-    <string name="crashczyk_error_activity_error_details_title">Czym jest dla mnie przyjaźń Twa.</string>
-    <string name="crashczyk_error_activity_error_details_close">Możesz spać spokojnie, przyjaźń swoje prawa zna.</string>
-    <string name="crashczyk_error_activity_error_details_copy">Skopiujmy to nim skończy się ten bal.</string>
-    <string name="crashczyk_error_activity_error_details_copied">Skopiujmy to nim skończy się ten bal.</string>
-    <string name="crashczyk_error_activity_error_details_clipboard_label">Czym jest dla mnie przyjaźń Twa.</string>
+
+  <!-- Toasts Messages -->
+  <string name="discharge_something_went_wrong">Something went wrong.</string>
+
+  <string name="crashczyk_error_activity_error_occurred_explanation">Coś poszło nie tak, mój przyjacielu.</string>
+  <string name="crashczyk_error_activity_unknown_exception">Mój przyjacielu, jak wyrazić to, co czuję...</string>
+  <string name="crashczyk_error_activity_restart_app">Zatańczmy zatem jeszcze raz.</string>
+  <string name="crashczyk_error_activity_close_app">Ma aplikacjo, byłaś mi na prawdę bliska.</string>
+  <string name="crashczyk_error_activity_error_details">Czym jest dla mnie przyjaźń Twa.</string>
+  <string name="crashczyk_error_activity_error_details_title">Czym jest dla mnie przyjaźń Twa.</string>
+  <string name="crashczyk_error_activity_error_details_close">Możesz spać spokojnie, przyjaźń swoje prawa zna.</string>
+  <string name="crashczyk_error_activity_error_details_copy">Skopiujmy to nim skończy się ten bal.</string>
+  <string name="crashczyk_error_activity_error_details_copied">Skopiujmy to nim skończy się ten bal.</string>
+  <string name="crashczyk_error_activity_error_details_clipboard_label">Czym jest dla mnie przyjaźń Twa.</string>
+
 </resources>
