@@ -7,14 +7,14 @@ import com.henorek.discharge.Solvable;
 import com.henorek.discharge.solutions.toasts.base.DischargeToast;
 import com.henorek.discharge.solutions.toasts.base.DischargeToastBuilder;
 
-public class SomethingWentWrongToast implements Solvable {
+public class OopsSomethingWentWrongToast implements Solvable {
 
   private final DischargeToast toast;
 
-  public SomethingWentWrongToast(final Context context) {
+  public OopsSomethingWentWrongToast(final Context context) {
     toast = DischargeToastBuilder
         .dischargeToast(context)
-        .withMessage(R.string.discharge_something_went_wrong)
+        .withMessage(R.string.discharge_oops_something_went_wrong)
         .withDuration(Toast.LENGTH_LONG)
         .build();
   }

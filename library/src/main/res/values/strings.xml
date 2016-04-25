@@ -20,6 +20,7 @@
 
   <!-- Toasts Messages -->
   <string name="discharge_something_went_wrong">Something went wrong.</string>
+  <string name="discharge_oops_something_went_wrong">Oops! Something went wrong.</string>
 
   <string name="crashczyk_error_activity_error_occurred_explanation">Coś poszło nie tak, mój przyjacielu.</string>
   <string name="crashczyk_error_activity_unknown_exception">Mój przyjacielu, jak wyrazić to, co czuję...</string>
