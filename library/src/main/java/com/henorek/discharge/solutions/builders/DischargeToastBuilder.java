@@ -1,4 +1,4 @@
-package com.henorek.discharge.solutions.toasts.base;
+package com.henorek.discharge.solutions.builders;
 
 import android.content.Context;
 
@@ -9,12 +9,8 @@ public class DischargeToastBuilder {
   private String message;
   private int duration;
 
-  private DischargeToastBuilder(final Context context) {
+  DischargeToastBuilder(final Context context) {
     this.context = context;
-  }
-
-  public static DischargeToastBuilder dischargeToast(Context context) {
-    return new DischargeToastBuilder(context);
   }
 
   public DischargeToastBuilder withMessage(String message) {

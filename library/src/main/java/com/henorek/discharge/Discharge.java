@@ -8,7 +8,7 @@ public class Discharge {
 
   private final Map<Class<?>, Solvable> dischargeBehaviors = new HashMap<>();
 
-  //region Discharge Singleton
+  // Discharge Singleton
   private final static Discharge INSTANCE = new Discharge();
 
   private Discharge() {
@@ -17,7 +17,6 @@ public class Discharge {
   public static Discharge getInstance() {
     return INSTANCE;
   }
-  //endregion
 
   /**
    *  Install library, from now on all UnhandledExceptions gonna be caught by Discharge.
@@ -38,7 +37,7 @@ public class Discharge {
     dischargeBehaviors.put(problem, solution);
   }
 
-  //region Package restricted methods
+  // Package restricted methods
   Solvable takeSolution(Class<?> model) {
     return dischargeBehaviors.get(model);
   }
@@ -46,5 +45,4 @@ public class Discharge {
   boolean isSolvable(Class<?> problem) {
     return dischargeBehaviors.containsKey(problem);
   }
-  //endregion
 }

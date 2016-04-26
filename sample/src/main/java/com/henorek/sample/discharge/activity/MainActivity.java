@@ -23,7 +23,8 @@ import android.widget.Button;
 
 import com.henorek.discharge.Discharge;
 import com.henorek.discharge.HandleException;
-import com.henorek.discharge.solutions.toasts.SomethingWentWrongToast;
+import com.henorek.discharge.solutions.builders.DischargeBuilder;
+import com.henorek.discharge.solutions.builders.DischargeDialog;
 import com.henorek.sample.discharge.exceptions.ArkaGdyniaKurwaSwiniaException;
 import com.henorek.sample.discharge.R;
 
@@ -45,8 +46,9 @@ public class MainActivity extends Activity {
         Discharge discharge = Discharge.getInstance();
         discharge.install(this);
 
-        //discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeToastBuilder.dischargeToast(this).withMessage("Dupa").build());
-        discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, new SomethingWentWrongToast(this));
+        //discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeToastBuilder.toast(this).withMessage("Dupa").build());
+        //discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, new SomethingWentWrongToast(this));
+        discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeBuilder.dialog(this).build());
 
         Button crashWithHandledException = (Button) findViewById(R.id.crashWithHandledException);
         Button crashWithUnhandledException = (Button) findViewById(R.id.crashWithUnhandledException);

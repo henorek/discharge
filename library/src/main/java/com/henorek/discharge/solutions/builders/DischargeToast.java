@@ -1,4 +1,4 @@
-package com.henorek.discharge.solutions.toasts.base;
+package com.henorek.discharge.solutions.builders;
 
 import android.content.Context;
 import android.widget.Toast;
