@@ -7,47 +7,10 @@ import com.henorek.discharge.Solvable;
 
 public class DischargeDialog implements Solvable {
 
-  private final AlertDialog.Builder dialog;
+  private final AlertDialog dialog;
 
-  DischargeDialog(final Context context, final String title, final int iconResourceId, final String message, final String positiveActionMessage, final DialogInterface.OnClickListener positiveActionEvent, final String neutralActionMessage, final DialogInterface.OnClickListener neutralActionEvent, final String negativeActionMessage, final DialogInterface.OnClickListener negativeActionEvent) {
-    this(context, title, message, positiveActionMessage, positiveActionEvent, neutralActionMessage, neutralActionEvent, negativeActionMessage, negativeActionEvent);
-    dialog.setIcon(iconResourceId);
-  }
-
-  DischargeDialog(final Context context, final String title, final String message, final String positiveActionMessage, final DialogInterface.OnClickListener positiveActionEvent, final String neutralActionMessage, final DialogInterface.OnClickListener neutralActionEvent, final String negativeActionMessage, final DialogInterface.OnClickListener negativeActionEvent) {
-    this(context, title, message, positiveActionMessage, positiveActionEvent, neutralActionMessage, neutralActionEvent);
-    dialog.setNegativeButton(negativeActionMessage, negativeActionEvent);
-  }
-
-  DischargeDialog(final Context context, final String title, final int iconResourceId, final String message, final String positiveActionMessage, final DialogInterface.OnClickListener positiveActionEvent, final String neutralActionMessage, final DialogInterface.OnClickListener neutralActionEvent) {
-    this(context, title, iconResourceId, message, positiveActionMessage, positiveActionEvent);
-    dialog.setNeutralButton(neutralActionMessage, neutralActionEvent);
-  }
-
-  DischargeDialog(final Context context, final String title, final String message, final String positiveActionMessage, final DialogInterface.OnClickListener positiveActionEvent, final String neutralActionMessage, final DialogInterface.OnClickListener neutralActionEvent) {
-    this(context, title, message, positiveActionMessage, positiveActionEvent);
-    dialog.setNeutralButton(neutralActionMessage, neutralActionEvent);
-  }
-
-  DischargeDialog(final Context context, final String title, final int iconResourceId, final String message, final String positiveActionMessage, DialogInterface.OnClickListener positiveActionEvent) {
-    this(context, title, message, positiveActionMessage, positiveActionEvent);
-    dialog.setIcon(iconResourceId);
-  }
-
-  DischargeDialog(final Context context, final String title, final String message, final String positiveActionMessage, DialogInterface.OnClickListener positiveActionEvent) {
-    this(context, title, message);
-    dialog.setPositiveButton(positiveActionMessage, positiveActionEvent);
-  }
-
-  DischargeDialog(final Context context, final String title, final String message, final int iconResourceId) {
-    this(context, title, message);
-    dialog.setIcon(iconResourceId);
-  }
-
-  DischargeDialog(final Context context, final String title, final String message) {
-    dialog = new AlertDialog.Builder(context)
-        .setTitle(title)
-        .setMessage(message);
+  DischargeDialog(AlertDialog dialog) {
+    this.dialog = dialog;
   }
 
   @Override public void solve() {
