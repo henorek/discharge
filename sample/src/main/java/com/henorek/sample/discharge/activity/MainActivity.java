@@ -17,10 +17,12 @@
 package com.henorek.sample.discharge.activity;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import android.widget.Toast;
 import com.henorek.discharge.Discharge;
 import com.henorek.discharge.HandleException;
 import com.henorek.discharge.solutions.builders.DischargeBuilder;
@@ -30,42 +32,49 @@ import com.henorek.sample.discharge.R;
 
 public class MainActivity extends Activity {
 
-    @HandleException private void methodThatThrowsHandledException() {
-        throw new ArkaGdyniaKurwaSwiniaException();
-    }
+  @HandleException private void methodThatThrowsHandledException() {
+    throw new ArkaGdyniaKurwaSwiniaException();
+  }
 
-    @HandleException private void methodThatThrowsUnhandledException() {
-        throw new RuntimeException();
-    }
+  @HandleException private void methodThatThrowsUnhandledException() {
+    throw new RuntimeException();
+  }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+  @Override protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
-        Discharge discharge = Discharge.getInstance();
-        discharge.install(this);
+    Discharge discharge = Discharge.getInstance();
+    discharge.install(this);
 
-        //discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeToastBuilder.toast(this).withMessage("Dupa").build());
-        //discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, new SomethingWentWrongToast(this));
-        discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeBuilder.dialog(this).build());
+    //discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeToastBuilder.toast(this).withMessage("Dupa").build());
+    //discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, new SomethingWentWrongToast(this));
+    discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeBuilder
+        .dialog(this)
+        .withTitle("Test")
+        .withMessage("Dalej test")
+        .withPositiveButton("Ok?", new DialogInterface.OnClickListener() {
+          @Override public void onClick(DialogInterface dialog, int which) {
+            Toast
+                .makeText(getBaseContext(), "Dupa", Toast.LENGTH_LONG)
+                .show();
+          }
+        })
+        .build());
 
-        Button crashWithHandledException = (Button) findViewById(R.id.crashWithHandledException);
-        Button crashWithUnhandledException = (Button) findViewById(R.id.crashWithUnhandledException);
+    Button crashWithHandledException = (Button) findViewById(R.id.crashWithHandledException);
+    Button crashWithUnhandledException = (Button) findViewById(R.id.crashWithUnhandledException);
 
-        crashWithHandledException.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                methodThatThrowsHandledException();
-            }
-        });
+    crashWithHandledException.setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View view) {
+        methodThatThrowsHandledException();
+      }
+    });
 
-        crashWithUnhandledException.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                methodThatThrowsUnhandledException();
-            }
-        });
-
-    }
+    crashWithUnhandledException.setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View view) {
+        methodThatThrowsUnhandledException();
+      }
+    });
+  }
 }

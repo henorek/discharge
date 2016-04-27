@@ -7,34 +7,53 @@ import com.henorek.discharge.Solvable;
 
 public class DischargeDialog implements Solvable {
 
-  private final Context context;
+  private final AlertDialog.Builder dialog;
 
-  private final String title;
-  private final String message;
+  DischargeDialog(final Context context, final String title, final int iconResourceId, final String message, final String positiveActionMessage, final DialogInterface.OnClickListener positiveActionEvent, final String neutralActionMessage, final DialogInterface.OnClickListener neutralActionEvent, final String negativeActionMessage, final DialogInterface.OnClickListener negativeActionEvent) {
+    this(context, title, message, positiveActionMessage, positiveActionEvent, neutralActionMessage, neutralActionEvent, negativeActionMessage, negativeActionEvent);
+    dialog.setIcon(iconResourceId);
+  }
+
+  DischargeDialog(final Context context, final String title, final String message, final String positiveActionMessage, final DialogInterface.OnClickListener positiveActionEvent, final String neutralActionMessage, final DialogInterface.OnClickListener neutralActionEvent, final String negativeActionMessage, final DialogInterface.OnClickListener negativeActionEvent) {
+    this(context, title, message, positiveActionMessage, positiveActionEvent, neutralActionMessage, neutralActionEvent);
+    dialog.setNegativeButton(negativeActionMessage, negativeActionEvent);
+  }
+
+  DischargeDialog(final Context context, final String title, final int iconResourceId, final String message, final String positiveActionMessage, final DialogInterface.OnClickListener positiveActionEvent, final String neutralActionMessage, final DialogInterface.OnClickListener neutralActionEvent) {
+    this(context, title, iconResourceId, message, positiveActionMessage, positiveActionEvent);
+    dialog.setNeutralButton(neutralActionMessage, neutralActionEvent);
+  }
+
+  DischargeDialog(final Context context, final String title, final String message, final String positiveActionMessage, final DialogInterface.OnClickListener positiveActionEvent, final String neutralActionMessage, final DialogInterface.OnClickListener neutralActionEvent) {
+    this(context, title, message, positiveActionMessage, positiveActionEvent);
+    dialog.setNeutralButton(neutralActionMessage, neutralActionEvent);
+  }
+
+  DischargeDialog(final Context context, final String title, final int iconResourceId, final String message, final String positiveActionMessage, DialogInterface.OnClickListener positiveActionEvent) {
+    this(context, title, message, positiveActionMessage, positiveActionEvent);
+    dialog.setIcon(iconResourceId);
+  }
+
+  DischargeDialog(final Context context, final String title, final String message, final String positiveActionMessage, DialogInterface.OnClickListener positiveActionEvent) {
+    this(context, title, message);
+    dialog.setPositiveButton(positiveActionMessage, positiveActionEvent);
+  }
+
+  DischargeDialog(final Context context, final String title, final String message, final int iconResourceId) {
+    this(context, title, message);
+    dialog.setIcon(iconResourceId);
+  }
 
   DischargeDialog(final Context context, final String title, final String message) {
-    this.context = context;
-    this.title = title;
-    this.message = message;
+    dialog = new AlertDialog.Builder(context)
+        .setTitle(title)
+        .setMessage(message);
   }
 
-
-  // TODO: To jest chujowe, w sensie tylko do testow, trzeba poprawic
   @Override public void solve() {
-    new AlertDialog.Builder(context)
-        .setTitle(title)
-        .setMessage(message)
-        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-          public void onClick(DialogInterface dialog, int which) {
-            // continue with delete
-          }
-        })
-        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-          public void onClick(DialogInterface dialog, int which) {
-            // do nothing
-          }
-        })
-        .setIcon(android.R.drawable.ic_dialog_alert)
-        .show();
+    dialog.show();
   }
 }
+
+//TODO: pola w kostruktorze ustawiam a w solve() tylko show robie, bedzie w chuj konstruktorow zeby uwzglednic kazda mozliwosc
+//TODO: archatypy są łatwe do rozjebania, po prostu zrobię modele z samymi danymi i dzieki metdzie withArchetype będę mógł podać archatyp i będzie sztosik
