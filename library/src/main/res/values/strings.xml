@@ -22,8 +22,15 @@
   <string name="discharge_something_went_wrong">Something went wrong.</string>
   <string name="discharge_oops_something_went_wrong">Oops! Something went wrong.</string>
 
+  <!-- Dialogs Messages -->
+  <string name="discharge_are_you_sure">Are you sure?</string>
+
+  <!-- Buttons -->
+  <string name="discharge_yes">Yes</string>
+  <string name="discharge_cancel">Cancel</string>
+
   <string name="crashczyk_error_activity_error_occurred_explanation">Coś poszło nie tak, mój przyjacielu.</string>
-  <string name="crashczyk_error_activity_unknown_exception">Mój przyjacielu, jak wyrazić to, co czuję...</string>
+  <string name="crashczyk_error_activity_unknown_exception">Mój przyjacielu, jak wyrazić to, co czuję…</string>
   <string name="crashczyk_error_activity_restart_app">Zatańczmy zatem jeszcze raz.</string>
   <string name="crashczyk_error_activity_close_app">Ma aplikacjo, byłaś mi na prawdę bliska.</string>
   <string name="crashczyk_error_activity_error_details">Czym jest dla mnie przyjaźń Twa.</string>

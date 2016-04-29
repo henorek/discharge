@@ -83,40 +83,39 @@ public class DischargeDialogBuilder {
     return this;
   }
 
-public DischargeDialogBuilder withNeutralButton(CharSequence text, DialogInterface.OnClickListener listener) {
-  dialog.setNeutralButton(text, listener);
-  return this;
+  public DischargeDialogBuilder withNeutralButton(CharSequence text, DialogInterface.OnClickListener listener) {
+    dialog.setNeutralButton(text, listener);
+    return this;
   }
 
-   public DischargeDialogBuilder withCancelable(boolean cancelable) {
+  public DischargeDialogBuilder withCancelable(boolean cancelable) {
     dialog.setCancelable(cancelable);
-     return this;
+    return this;
   }
 
-   public DischargeDialogBuilder withOnCancelListener(DialogInterface.OnCancelListener onCancelListener) {
-     dialog.setOnCancelListener(onCancelListener);
-     return this;
+  public DischargeDialogBuilder withOnCancelListener(DialogInterface.OnCancelListener onCancelListener) {
+    dialog.setOnCancelListener(onCancelListener);
+    return this;
   }
 
-   public DischargeDialogBuilder withOnDismissListener(DialogInterface.OnDismissListener onDismissListener) {
-     if (Build.VERSION.SDK_INT > 17)
-     dialog.setOnDismissListener(onDismissListener);
-     return this;
+  public DischargeDialogBuilder withOnDismissListener(DialogInterface.OnDismissListener onDismissListener) {
+    if (Build.VERSION.SDK_INT > 17) dialog.setOnDismissListener(onDismissListener);
+    return this;
   }
 
-   public DischargeDialogBuilder withOnKeyListener(DialogInterface.OnKeyListener onKeyListener) {
-     dialog.setOnKeyListener(onKeyListener);
-     return this;
+  public DischargeDialogBuilder withOnKeyListener(DialogInterface.OnKeyListener onKeyListener) {
+    dialog.setOnKeyListener(onKeyListener);
+    return this;
   }
 
-   public DischargeDialogBuilder withItems(int itemsResourceId, DialogInterface.OnClickListener listener) {
-     dialog.setItems(itemsResourceId, listener);
-     return this;
+  public DischargeDialogBuilder withItems(int itemsResourceId, DialogInterface.OnClickListener listener) {
+    dialog.setItems(itemsResourceId, listener);
+    return this;
   }
 
-   public DischargeDialogBuilder withItems(CharSequence[] items, DialogInterface.OnClickListener listener) {
-     dialog.setItems(items, listener);
-     return this;
+  public DischargeDialogBuilder withItems(CharSequence[] items, DialogInterface.OnClickListener listener) {
+    dialog.setItems(items, listener);
+    return this;
   }
 
   public DischargeDialogBuilder withAdapter(ListAdapter adapter, DialogInterface.OnClickListener listener) {
@@ -124,28 +123,28 @@ public DischargeDialogBuilder withNeutralButton(CharSequence text, DialogInterfa
     return this;
   }
 
-
-  public DischargeDialogBuilder withCursor(Cursor cursor, DialogInterface.OnClickListener listener, String labelColumn) {
+  public DischargeDialogBuilder withCursor(Cursor cursor, DialogInterface.OnClickListener listener,
+      String labelColumn) {
     dialog.setCursor(cursor, listener, labelColumn);
     return this;
   }
 
-   public DischargeDialogBuilder withMultiChoiceItems(int itemsId, boolean[] checkedItems,
+  public DischargeDialogBuilder withMultiChoiceItems(int itemsId, boolean[] checkedItems,
       DialogInterface.OnMultiChoiceClickListener listener) {
-     dialog.setMultiChoiceItems(itemsId, checkedItems, listener);
-     return this;
+    dialog.setMultiChoiceItems(itemsId, checkedItems, listener);
+    return this;
   }
 
-   public DischargeDialogBuilder withMultiChoiceItems(CharSequence[] items, boolean[] checkedItems,
+  public DischargeDialogBuilder withMultiChoiceItems(CharSequence[] items, boolean[] checkedItems,
       DialogInterface.OnMultiChoiceClickListener listener) {
-     dialog.setMultiChoiceItems(items, checkedItems, listener);
-     return this;
+    dialog.setMultiChoiceItems(items, checkedItems, listener);
+    return this;
   }
 
-   public DischargeDialogBuilder withMultiChoiceItems(Cursor cursor, String isCheckedColumn, String labelColumn,
+  public DischargeDialogBuilder withMultiChoiceItems(Cursor cursor, String isCheckedColumn, String labelColumn,
       DialogInterface.OnMultiChoiceClickListener listener) {
-     dialog.setMultiChoiceItems(cursor, isCheckedColumn, labelColumn, listener);
-     return this;
+    dialog.setMultiChoiceItems(cursor, isCheckedColumn, labelColumn, listener);
+    return this;
   }
 
   public DischargeDialogBuilder withSingleChoiceItems(int itemsId, int checkedItem,
@@ -166,25 +165,24 @@ public DischargeDialogBuilder withNeutralButton(CharSequence text, DialogInterfa
     return this;
   }
 
-   public DischargeDialogBuilder withSingleChoiceItems(ListAdapter adapter, int checkedItem,
+  public DischargeDialogBuilder withSingleChoiceItems(ListAdapter adapter, int checkedItem,
       DialogInterface.OnClickListener listener) {
     dialog.setSingleChoiceItems(adapter, checkedItem, listener);
     return this;
   }
 
-   public DischargeDialogBuilder withOnItemSelectedListener(AdapterView.OnItemSelectedListener listener) {
+  public DischargeDialogBuilder withOnItemSelectedListener(AdapterView.OnItemSelectedListener listener) {
     dialog.setOnItemSelectedListener(listener);
     return this;
   }
 
-   public DischargeDialogBuilder withView(int layoutResId) {
-     if (Build.VERSION.SDK_INT >21)
-    dialog.setView(layoutResId);
+  public DischargeDialogBuilder withView(int layoutResId) {
+    if (Build.VERSION.SDK_INT > 21) dialog.setView(layoutResId);
     return this;
   }
 
-   public DischargeDialogBuilder withView(View view) {
-     dialog.setView(view);
+  public DischargeDialogBuilder withView(View view) {
+    dialog.setView(view);
     return this;
   }
 

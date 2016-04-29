@@ -1,8 +1,6 @@
 package com.henorek.discharge.solutions.builders;
 
 import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import com.henorek.discharge.Solvable;
 
 public class DischargeDialog implements Solvable {
