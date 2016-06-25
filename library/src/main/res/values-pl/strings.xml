@@ -2,4 +2,17 @@
 <resources>
   <string name="discharge_something_went_wrong">Coś poszło nie tak.</string>
   <string name="discharge_oops_something_went_wrong">Ups! Coś poszło nie tak.</string>
+  <string name="discharge_are_you_sure">Jesteś pewien?</string>
+  <string name="discharge_cancel">Anuluj</string>
+  <string name="discharge_yes">Tak</string>
+  <string name="fuse_error_activity_error_occurred_explanation">Nastąpił nieoczekiwany błąd.\nPrzepraszamy za kłopot.</string>
+  <string name="fuse_error_activity_close_app">Zamknij aplikację</string>
+  <string name="fuse_error_activity_error_details">Szczegóły błędu</string>
+  <string name="fuse_error_activity_error_details_clipboard_label">Informacje o błędzie</string>
+  <string name="fuse_error_activity_error_details_close">Zamknij</string>
+  <string name="fuse_error_activity_error_details_copied">Skopiowano do schowka</string>
+  <string name="fuse_error_activity_error_details_copy">Skopiuj do schowka</string>
+  <string name="fuse_error_activity_error_details_title">Szczegóły błędu</string>
+  <string name="fuse_error_activity_restart_app">Zrestartuj aplikację</string>
+  <string name="fuse_error_activity_unknown_exception">Nieznany błąd</string>
 </resources>

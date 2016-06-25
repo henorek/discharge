@@ -2,4 +2,19 @@
 <resources>
   <string name="discharge_something_went_wrong">Something went wrong.</string>
   <string name="discharge_oops_something_went_wrong">Oops! Something went wrong.</string>
+  <string name="discharge_are_you_sure">Are you sure?</string>
+  <string name="discharge_cancel">Cancel</string>
+  <string name="discharge_yes">Yes</string>
+  <string name="fuse_error_activity_close_app">Close app</string>
+  <string name="fuse_error_activity_error_occurred_explanation">An unexpected error occurred.\nSorry for the
+    inconvenience.
+  </string>
+  <string name="fuse_error_activity_error_details">Error details</string>
+  <string name="fuse_error_activity_error_details_clipboard_label">Error information</string>
+  <string name="fuse_error_activity_error_details_close">Close</string>
+  <string name="fuse_error_activity_error_details_copied">Copied to clipboard</string>
+  <string name="fuse_error_activity_error_details_copy">Copy to clipboard</string>
+  <string name="fuse_error_activity_error_details_title">Error details</string>
+  <string name="fuse_error_activity_restart_app">Restart application</string>
+  <string name="fuse_error_activity_unknown_exception">Unknown exception</string>
 </resources>

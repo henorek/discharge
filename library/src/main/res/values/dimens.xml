@@ -16,8 +16,8 @@
 
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="crashczyk_activity_horizontal_margin">16dp</dimen>
-    <dimen name="crashczyk_activity_vertical_margin">16dp</dimen>
+    <dimen name="fuse_activity_horizontal_margin">16dp</dimen>
+    <dimen name="fuse_activity_vertical_margin">16dp</dimen>
 
-    <dimen name="crashczyk_error_activity_error_details_text_size">12sp</dimen>
+    <dimen name="fuse_error_activity_error_details_text_size">12sp</dimen>
 </resources>

@@ -44,12 +44,11 @@ public class MainActivity extends Activity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    Discharge discharge = Discharge.getInstance();
-    discharge.install(this);
+    Discharge.install(this);
 
     //discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeToastBuilder.toast(this).withMessage("Dupa").build());
     //discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, new SomethingWentWrongToast(this));
-    discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeBuilder
+    Discharge.defineBehavior(ArkaGdyniaKurwaSwiniaException.class, DischargeBuilder
         .dialog(this)
         .withTitle("Test")
         .withMessage("Dalej test")
